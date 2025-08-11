@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* tailwind imports already present above these lines */
+:root {
+  --card-radius: 12px;
+}
+
+/* smooth transitions for interactive elements */
+.u-transition {
+  transition: all 0.18s ease;
+}
+
+/* multiline clamp helpers (no plugin) */
+.line-clamp-1 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+.line-clamp-2 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+/* small utility to keep images centered and contained */
+.product-img-wrap {
+  height: 12rem; /* consistent image area */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8fafc;
+}
+
+/* subtle focus ring for accessibility */
+:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px rgba(11, 116, 255, 0.12);
+}
+body {
+  @apply bg-gradient-to-br from-sky-50 to-sky-200;
+}
